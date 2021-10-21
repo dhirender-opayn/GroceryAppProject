@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <androidx.core.widget.NestedScrollView
@@ -22,31 +19,57 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
+                android:id="@+id/tv_categories"
+                style="@style/textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_categories"
                 android:text="@string/categories"
-                style="@style/textview"
-                app:layout_constraintTop_toBottomOf="@+id/home_pager"
                 android:textSize="@dimen/_16sdp"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_pager" />
+
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rv_categories"
-                app:layout_constraintTop_toBottomOf="@+id/tv_categories"
-                android:orientation="horizontal"
                 android:layout_marginTop="@dimen/_10sdp"
-                tools:listitem="@layout/categories_view_holder"
+                android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/tv_categories"
+                tools:listitem="@layout/categories_view_holder" />
 
+            <TextView
+                android:id="@+id/tv_top_products"
+                style="@style/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Products"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_categories" />
 
+            <TextView
+                android:id="@+id/rv_top_products_explore"
+                style="@style/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Products"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_categories" />
 
-
-
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tv_top_products"
+                tools:listitem="@layout/categories_view_holder" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

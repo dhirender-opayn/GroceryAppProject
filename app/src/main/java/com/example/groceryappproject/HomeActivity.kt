@@ -12,7 +12,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_home)
-        val listimage = listOf(R.drawable.offer,R.drawable.offer)
+//        val listimage = listOf(R.drawable.offer,R.drawable.offer)
 //        binding.homePager.adapter =ImageAdapter(this)
 
         binding.rvCategories.adapter = CategoryAdapter()

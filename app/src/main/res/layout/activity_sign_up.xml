@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="signUpActivity"
+            type="com.example.groceryappproject.authentication.SignUpActivity" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/singup_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tv_singup"
+                style="@style/header"
+                android:layout_gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/singup_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/singup_img"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person"
+                app:layout_constraintBottom_toTopOf="@+id/first_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_singup"
+                app:riv_corner_radius="@dimen/_60sdp" />
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/first_name"
+                android:singleLine="true"
+
+                app:layout_constraintTop_toBottomOf="@+id/singup_img" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/last_name"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/email"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/mobile"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <EditText
+                android:id="@+id/s_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/password"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/mobile" />
+
+            <EditText
+                android:id="@+id/s_comfirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/email"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/s_password" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn"
+                style="@style/button"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:textSize="@dimen/_12sdp"
+                app:cornerRadius="@dimen/_26sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/s_comfirm_password" />
+
+            <View
+                android:id="@+id/viewStart"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+
+                android:background="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_login_with"
+                app:layout_constraintEnd_toStartOf="@+id/tv_login_with"
+                app:layout_constraintTop_toTopOf="@+id/tv_login_with" />
+
+            <TextView
+                android:id="@+id/tv_login_with"
+                style="@style/textview"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Login With"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+            <View
+                android:id="@+id/viewEnd"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_login_with"
+                app:layout_constraintStart_toEndOf="@+id/tv_login_with"
+                app:layout_constraintTop_toTopOf="@+id/tv_login_with" />
+
+            <ImageView
+                android:id="@+id/fb_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/facebook"
+                app:layout_constraintEnd_toStartOf="@+id/google_login"
+                app:layout_constraintStart_toStartOf="@+id/viewStart"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login_with" />
+
+            <ImageView
+                android:id="@+id/google_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/google"
+                app:layout_constraintEnd_toEndOf="@+id/viewEnd"
+                app:layout_constraintStart_toEndOf="@+id/fb_login"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login_with" />
+
+            <LinearLayout
+                android:id="@+id/register_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fb_login">
+
+                <TextView
+                    android:id="@+id/tv_singUp_hint"
+                    style="@style/textview"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/already_have_an_account"
+                    app:layout_constraintEnd_toStartOf="@+id/register"
+                    app:layout_constraintStart_toStartOf="@id/fb_login"
+                    app:layout_constraintTop_toBottomOf="@+id/fb_login" />
+
+                <TextView
+                    android:id="@+id/tvlogin"
+                    style="@style/textview"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/login"
+                    android:textColor="@color/green_700"
+                    app:layout_constraintStart_toEndOf="@+id/tv_singUp_hint"
+                    app:layout_constraintTop_toBottomOf="@+id/fb_login" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

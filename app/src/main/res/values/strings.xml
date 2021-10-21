@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GroceryAppProject</string>
+    <string name="login">Login</string>
+    <string name="sign_in_with_your_previous_account_associated_with_us">Sign in with your previous account associated with us</string>
+    <string name="remeber_me">Remeber Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="first_name">First Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="register">Register</string>
+    <string name="forgot_password2">Forgot Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="categories">Categories</string>
+</resources>

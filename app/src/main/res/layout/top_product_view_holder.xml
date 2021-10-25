@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rv_top_product_container"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/blue2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rv_img_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/rv_top_product_detials"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/category_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/food"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_white_border_fill"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_white_heart"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rv_top_product_detials"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_img_container">
+
+                <TextView
+                    android:id="@+id/rv_top_product_name"
+                    style="@style/text_header"
+                    android:padding="0dp"
+                    android:text="Herbs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/top_product_price"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/top_product_price"
+                    style="@style/text_header"
+                    android:padding="0dp"
+                    android:text="$0.25"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_top_product_name" />
+
+              <com.google.android.material.textview.MaterialTextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawableRight="@drawable/ic_baseline_add_24"
+                  android:text="Add"
+                  android:textSize="@dimen/_10sdp"
+                  android:textColor="@color/white"
+                 android:paddingVertical="@dimen/_1sdp"
+                  android:paddingHorizontal="@dimen/_4sdp"
+                  android:background="@drawable/rectangel_border"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

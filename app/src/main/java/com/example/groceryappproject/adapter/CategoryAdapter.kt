@@ -1,10 +1,11 @@
 package com.example.groceryappproject.adapter
 
-import android.view.LayoutInflater
+ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+ import androidx.recyclerview.widget.RecyclerView
 import com.example.groceryappproject.R
+
 
 class CategoryAdapter :RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>(){
 
@@ -14,7 +15,6 @@ class CategoryAdapter :RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>(
                 .inflate(R.layout.categories_view_holder, parent, false)
         )
         return view
-
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {

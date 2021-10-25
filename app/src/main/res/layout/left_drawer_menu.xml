@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/user_img"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_250sdp" />
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/text_header"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Alex Shaw"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/user_email"
+        app:layout_constraintStart_toEndOf="@+id/user_img"
+        app:layout_constraintTop_toTopOf="@+id/user_img" />
+
+    <TextView
+        android:id="@+id/user_email"
+        style="@style/text_header"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="alex@gmail.com"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/user_img"
+        app:layout_constraintStart_toEndOf="@+id/user_img"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+
+    <View
+        android:id="@+id/myView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toBottomOf="@+id/user_img" />
+
+    <TextView
+        android:id="@+id/my_order"
+        style="@style/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/my_order"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myView1" />
+
+    <View
+        android:id="@+id/myView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toBottomOf="@+id/my_order" />
+
+    <TextView
+        android:id="@+id/contact_us"
+        style="@style/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:padding="@dimen/_5sdp"
+        android:text="Contact Us"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myView2" />
+    <View
+        android:id="@+id/myView3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toBottomOf="@+id/contact_us" />
+
+    <TextView
+        android:id="@+id/about_us"
+        style="@style/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/about_us"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myView3" />
+    <View
+        android:id="@+id/myView4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toBottomOf="@+id/about_us" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

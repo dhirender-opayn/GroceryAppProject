@@ -4,6 +4,7 @@ package com.example.groceryappproject
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.view.get
 import com.example.groceryappproject.common.BaseActivity
 import com.example.groceryappproject.common.Utils
 import com.example.groceryappproject.fragment.CategoriesFragment
@@ -16,7 +17,6 @@ class HomeActivity : BaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         bottomNavigationClickListner()
-
 
     }
 
